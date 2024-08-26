@@ -1,0 +1,94 @@
+.button {
+	width: var(--width);
+	height: var(--height);
+	border-radius: var(--bd-radius);
+	padding: var(--padding);
+	transition: all .15s ease-in-out;
+}
+
+.none {
+	--padding: 0;
+}
+
+.medium {
+	--padding: 12px 24px;
+}
+
+.large {
+	--padding: 20px 48px;
+}
+
+.small {
+	--padding: 8px 12px;
+}
+
+/* Variants */
+
+.contained {
+	--width: auto;
+	--height: auto;
+	--bd-radius: 3px;
+
+	background-color: var(--accent);
+	border: none;
+
+	&:hover {
+		background-color: var(--text);
+	}
+}
+
+.rounded {
+	--width: 40px;
+	--height: 40px;
+	--bd-radius: 50%;
+
+	color: var(--text);
+	background-color: var(--white);
+	border: none;
+
+	&:hover {
+		color: var(--white);
+		background-color: var(--text);
+	}
+}
+
+.square {
+	--width: 32px;
+	--height: 24px;
+	--bd-radius: 3px;
+
+	color: var(--white);
+	background-color: var(--accent);
+	border: 1px solid transparent;
+
+	&:hover {
+		background-color: transparent;
+		border: 1px solid var(--page-button-color);
+		color: var(--page-button-color);
+	}
+}
+
+.search {
+	--width: 51px;
+	--height: 40px;
+
+	position: relative;
+	background-color: var(--accent);
+	border: none;
+	color: transparent;
+	font-size: 0px;
+
+	&:hover {
+		background-color: var(--text);
+	}
+
+	&::after {
+		content: url("/icons/search.png");
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		width: 24px;
+		height: 24px;
+	}
+}

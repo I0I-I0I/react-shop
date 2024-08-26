@@ -1,0 +1,13 @@
+.dropdown {
+	font-family: var(--second-family);
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--white);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	& > option {
+		background-color: black;
+	}
+}

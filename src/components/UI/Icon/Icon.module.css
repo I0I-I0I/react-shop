@@ -1,0 +1,20 @@
+.icon {
+	width: var(--size);
+	height: var(--size);
+}
+
+.default {
+	--size: 16px;
+}
+
+.small {
+	--size: 12px;
+}
+
+.medium {
+	--size: 24px;
+}
+
+.large {
+	--size: 45px;
+}
