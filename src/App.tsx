@@ -1,6 +1,4 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Link from "./components/UI/Link/Link";
+import { Header, Footer } from "@/components";
 import styles from "./App.module.css";
 
 const App = () => {
@@ -8,7 +6,7 @@ const App = () => {
 		<div className={styles.root}>
 			<Header />
 			<main>
-				<Link href="#" variant="default">Hello</Link>
+				<div>Hello</div>
 			</main>
 			<Footer />
 		</div>

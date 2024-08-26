@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Link.module.css";
-import cls from "../../../utils/cls";
+import cls from "@/utils/cls";
 
-type variantType = "default" | "block";
+type variantType = "default" | "small";
 
 interface Props {
 	href: string;
@@ -11,12 +11,12 @@ interface Props {
 	variant?: variantType;
 }
 
-enum linkVariants {
-	default = "default",
-	block = "block",
-}
+const variantLinks = {
+	default: "",
+	small: "link_small",
+};
 
-const Link: React.FC<Props> = ({
+export const Link: React.FC<Props> = ({
 	href,
 	children,
 	className = "",
@@ -24,12 +24,10 @@ const Link: React.FC<Props> = ({
 	...props
 }) => (
 	<a
-		className={cls(styles.link, linkVariants[variant], className)}
+		className={cls(styles.link, styles[variantLinks[variant]], className)}
 		href={href}
 		{...props}
 	>
 		{children}
 	</a>
-)
-
-export default Link;
+);

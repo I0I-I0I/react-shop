@@ -1,3 +1,7 @@
-link {
+.link {
 	cursor: pointer;
+}
+
+.link_small {
+	font-size: 0.8rem;
 }
