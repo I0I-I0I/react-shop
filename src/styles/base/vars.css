@@ -1,3 +1,23 @@
 :root {
 	--global-padding: 15px;
+
+	--font-main: "Lato", sans-serif;
+	--font-second: "Josefin Sans", sans-serif;
+	--font-third: "Poppins", sans-serif;
+	--font-forth: "Roboto", sans-serif;
+
+	--white: #ffffff;
+	--bg-shade: #eeeffb;
+	--grey-text: rgba(21, 24, 117, 0.1);
+	--accent: #fb2e86;
+	--ugsadug: #9f63b5;
+	--text: #151875;
+	--sky-blue: #00c1fe;
+	--section-hover: #2f1ac4;
+	--sale-tage-coloe: #3f509e;
+	--price-tag-color: #fb2448;
+	--violet: #7e33e0;
+	--sub-text-color: #8a8fb9;
+	--page-button-color: #e0d3f5;
+	--pink: #fb2e86;
 }
