@@ -5,3 +5,5 @@ export * from "./Icon/Icon";
 export * from "./Logo/Logo";
 export * from "./Button/Button";
 export * from "./Input/Input";
+export * from "./TextWithIcon/TextWithIcon";
+export * from "./Search/Search";

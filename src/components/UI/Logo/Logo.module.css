@@ -1,6 +1,10 @@
 .logo {
 	font-family: var(--second-family);
+	max-height: auto;
 	font-weight: 700;
 	font-size: 2.125rem;
 	color: #0d0e43;
+
+	width: 100px;
+	height: 34px;
 }

@@ -1,7 +1,43 @@
-.link {
+.defaultLink {
+	position: relative;
 	cursor: pointer;
+	color: var(--color);
+	transition: all .15s ease-in-out;
+
+	&:hover {
+		color: var(--color-hover);
+	}
 }
 
-.link_small {
+.link {
+}
+
+.linkHover {
+	--color-hover: var(--accent);
+
+	&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 2px;
+			left: 0;
+			width: 0px;
+			bottom: -1px;
+			background-color: var(--color-hover);
+			transition: all .2s ease-in-out;
+		}
+
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+.default {
+	font-size: 1rem;
+}
+
+.small {
 	font-size: 0.8rem;
 }

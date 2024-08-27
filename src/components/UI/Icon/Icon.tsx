@@ -2,7 +2,7 @@ import React from "react";
 import cls from "@/utils/cls";
 import styles from "./Icon.module.css";
 
-type IconSize =
+export type IconSize =
 	| "default"
 	| "small"
 	| "medium"
@@ -10,7 +10,7 @@ type IconSize =
 
 interface IconProps {
 	src: string;
-	size: IconSize;
+	size?: IconSize;
 	alt?: string;
 }
 

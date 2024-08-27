@@ -2,32 +2,46 @@ import React from "react";
 import styles from "./Link.module.css";
 import cls from "@/utils/cls";
 
-type variantType = "default" | "small";
+type sizeType =
+	| "default"
+	| "small";
 
-interface Props {
+type variantType =
+	| "link"
+	| "button"
+	| "card";
+
+interface LinkProps extends React.ComponentProps<"a"> {
 	href: string;
-	children: string | React.ReactElement;
+	children: React.ReactNode;
+	noHover?: boolean;
 	className?: string;
+	size?: sizeType;
 	variant?: variantType;
 }
 
-const variantLinks = {
-	default: "",
-	small: "link_small",
-};
-
-export const Link: React.FC<Props> = ({
+export const Link = ({
 	href,
 	children,
+	noHover,
 	className = "",
-	variant = "default",
+	size = "default",
+	variant = "link",
 	...props
-}) => (
-	<a
-		className={cls(styles.link, styles[variantLinks[variant]], className)}
-		href={href}
-		{...props}
-	>
-		{children}
-	</a>
-);
+}: LinkProps) => {
+	return (
+		<a
+			className={cls(
+				!noHover ? styles.linkHover : "",
+				styles.defaultLink,
+				styles[size],
+				styles[variant],
+				className
+			)}
+			href={href}
+			{...props}
+		>
+			{children}
+		</a>
+	)
+};
