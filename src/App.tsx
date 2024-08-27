@@ -6,7 +6,7 @@ const App = () => {
 		<div className={styles.root}>
 			<Header />
 			<main>
-				<div>Hello</div>
+				<div></div>
 			</main>
 			<Footer />
 		</div>
