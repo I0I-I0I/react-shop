@@ -1,5 +1,7 @@
 :root {
 	--global-padding: 15px;
+	--page-width: 1170px;
+	--page-max-width: calc(var(--page-width) + (var(--global-padding) * 2));
 
 	--font-main: "Lato", sans-serif;
 	--font-second: "Josefin Sans", sans-serif;

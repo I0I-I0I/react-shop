@@ -1,15 +1,17 @@
 /* Header */
 
 .header__top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 15px;
-	color: var(--white);
 	background-color: var(--violet);
 
-	padding-top: 12px;
-	padding-bottom: 12px;
+	& > div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		color: var(--white);
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
 }
 
 .header__bottom {

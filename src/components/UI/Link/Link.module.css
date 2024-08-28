@@ -8,7 +8,8 @@
 	color: var(--color);
 	transition: all var(--transition-duration) ease-in-out;
 
-	&:hover {
+	&:hover,
+	&:focus-visible {
 		--color: var(--color-hover);
 		--color-icon: var(--color-hover);
 	}
@@ -18,6 +19,7 @@
 	--color-hover: var(--accent);
 
 	color: var(--color);
+	outline: none;
 
 	&::before {
 			content: "";
@@ -31,7 +33,8 @@
 			transition: all var(--transition-duration) ease-in-out;
 		}
 
-	&:hover {
+	&:hover,
+	&:focus-visible {
 		&::before {
 			width: 100%;
 		}

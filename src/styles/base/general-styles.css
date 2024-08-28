@@ -21,9 +21,11 @@ body {
 }
 
 .container {
-	max-width: 800px;
+	--page-max-width: calc(1170px + (var(--global-padding) * 2));
+	max-width: var(--page-max-width);
 	margin: 0 auto;
-	padding: 0 var(--global-padding);
+	padding-left: var(--global-padding);
+	padding-right: var(--global-padding);
 }
 
 .hidden {
