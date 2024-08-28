@@ -50,9 +50,16 @@
 	gap: clamp(15px, 10vw - 70px, 50px);
 }
 
+.dropdownLink {
+	--color-current-item: inherit;
+}
+
 /* Icons */
 
 .contacts__iconWrapper {
+	--color: white;
+	--color-hover: white;
+
 	display: flex;
 	align-items: center;
 	gap: 12px;

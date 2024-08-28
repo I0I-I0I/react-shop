@@ -2,3 +2,8 @@
 	display: flex;
 	align-items: center;
 }
+
+.textWithIcon > [data-svg-icon] {
+	fill: var(--color-icon);
+	transition: all var(--transition-duration) ease-in-out;
+}

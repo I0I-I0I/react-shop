@@ -1,19 +1,23 @@
 .defaultLink {
+	--transition-duration: .15s;
+	--color: inherit;
+	--color-icon: white;
+
 	position: relative;
 	cursor: pointer;
 	color: var(--color);
-	transition: all .15s ease-in-out;
+	transition: all var(--transition-duration) ease-in-out;
 
 	&:hover {
-		color: var(--color-hover);
+		--color: var(--color-hover);
+		--color-icon: var(--color-hover);
 	}
-}
-
-.link {
 }
 
 .linkHover {
 	--color-hover: var(--accent);
+
+	color: var(--color);
 
 	&::before {
 			content: "";
@@ -24,7 +28,7 @@
 			width: 0px;
 			bottom: -1px;
 			background-color: var(--color-hover);
-			transition: all .2s ease-in-out;
+			transition: all var(--transition-duration) ease-in-out;
 		}
 
 	&:hover {

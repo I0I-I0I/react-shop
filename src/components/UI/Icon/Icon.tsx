@@ -1,6 +1,6 @@
-import React from "react";
 import cls from "@/utils/cls";
 import styles from "./Icon.module.css";
+import { ReactSVG } from "react-svg";
 
 export type IconSize =
 	| "default"
@@ -14,6 +14,6 @@ interface IconProps {
 	alt?: string;
 }
 
-export const Icon: React.FC<IconProps> = ({ src, size = "default", alt = "Imagine icon here" }) => (
-	<img src={src} alt={alt} className={cls(styles.icon, styles[size])} />
+export const Icon = ({ src, size = "default", alt = "Imagine icon here" }: IconProps) => (
+	<ReactSVG data-svg-icon src={src} desc={alt} className={cls(styles.icon, styles[size])} />
 )

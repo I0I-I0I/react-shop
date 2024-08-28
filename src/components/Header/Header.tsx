@@ -1,19 +1,18 @@
 import { Link, Dropdown, Logo, TextWithIcon, Search } from "@/components/UI";
-import { LinkDropdown } from "./LinkDropdown/LinkDropdown";
 import styles from "./Header.module.css";
 import cls from "@/utils/cls";
 
 const data = {
 	languages: [
-		"English",
-		"Russian",
-		"Bulgar",
-		"Ukrain"
+		{ value: "English" },
+		{ value: "Russian" },
+		{ value: "Bulgar" },
+		{ value: "Ukrain" },
 	],
 	currency: [
-		"USD",
-		"RUB"
-	]
+		{ value: "USD" },
+		{ value: "RUB" },
+ 	]
 }
 
 export const Header = () => (
@@ -21,12 +20,12 @@ export const Header = () => (
 		<div className={styles.header__top}>
 			<ul className={cls(styles.contacts__list, styles.header__list)}>
 				<li className={styles.contacts__item}>
-					<Link href="mailto:mhhasanul@gmail.com" className={styles.contacts__iconWrapper}>
+					<Link href="mailto:mhhasanul@gmail.com" noHover className={styles.contacts__iconWrapper}>
 						<TextWithIcon src="/icons/mail.svg" direction="left">mhhasanul@gmail.com</TextWithIcon>
 					</Link>
 				</li>
 				<li className={styles.contacts__itemWrapper}>
-					<Link href="tel:(12345)67890" className={styles.contacts__iconWrapper}>
+					<Link href="tel:(12345)67890" noHover className={styles.contacts__iconWrapper}>
 						<TextWithIcon src="/icons/phone.svg" direction="left">(12345)67890</TextWithIcon>
 					</Link>
 				</li>
@@ -62,12 +61,16 @@ export const Header = () => (
 			<nav className={styles.nav}>
 				<ul className={cls(styles.nav__list)}>
 					<li>
-						<Dropdown>
-							<Link href="#">Hero</Link>
-							<Link href="#">About</Link>
-							<Link href="#">What</Link>
-							<Link href="#">Idk</Link>
-						</Dropdown>
+						<Dropdown
+							className={styles.dropdownLink}
+							openOn="hover"
+							component="a"
+							disableSwitchMode
+							options={[
+								{ value: "Home", linkTo: { href: "#" } },
+								{ value: "About", linkTo: { href: "#" } },
+							]}
+						/>
 					</li>
 					<li>
 						<Link href="#">Pages</Link>
