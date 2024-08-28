@@ -1,4 +1,6 @@
 .dropdown {
+	--color-current-item: var(--white);
+	--bg-color-current-item: transparent;
 	--item-border-radius: 5px;
 
 	position: relative;
@@ -52,11 +54,8 @@
 /* Items */
 
 .item {
-	--color: var(--white);
-	--bg-color: transparent;
-
-	color: var(--color);
-	background-color: var(--bg-color);
+	color: var(--color-current-item);
+	background-color: var(--bg-color-current-item);
 
 	display: block;
 	position: relative;
@@ -65,14 +64,14 @@
 	font-size: inherit;
 
 	li > & {
-		--color: black;
+		--color-current-item: black;
 
 		padding: 5px;
 		width: 100%;
 		border-radius: var(--item-border-radius);
 
 		&:hover {
-			--bg-color: var(--ugsadug);
+			--bg-color-current-item: var(--ugsadug);
 		}
 	}
 }

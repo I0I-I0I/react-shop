@@ -6,9 +6,21 @@ type OpenOnType =
 	| "hover"
 	| "click";
 
+type ComponentType =
+	| "button"
+	| "a";
+
+type OptionsLinkType = {
+	value: string,
+	linkTo?: { href: string },
+};
+
 interface DropdownProps {
-	options: string[];
+	options: OptionsLinkType[];
 	openOn?: OpenOnType;
+	component?: ComponentType;
+	disableSwitchMode?: boolean;
+	className?: string;
 }
 
 interface IMode {
@@ -21,11 +33,18 @@ interface IMode {
 	};
 }
 
-export const Dropdown = ({ options, openOn = "click" }: DropdownProps) => {
+export const Dropdown = ({
+	options,
+	className = "",
+	openOn = "click",
+	disableSwitchMode = false,
+	component = "button"
+}: DropdownProps) => {
 	const [currentItem, setCurrentItem] = useState(options[0]);
 	const [isOpen, setIsOpen] = useState(false);
 
-	const handleOnClick = (item: string) => {
+	const handleOnClick = (item: OptionsLinkType) => {
+		if (disableSwitchMode) return;
 		setIsOpen(false);
 		setCurrentItem(item);
 	};
@@ -45,28 +64,30 @@ export const Dropdown = ({ options, openOn = "click" }: DropdownProps) => {
 	};
 
 	const mode: IMode = modeList[openOn];
+	const Component = component;
 
 	return (
 		<div
-			className={styles.dropdown}
+			className={cls(styles.dropdown, className)}
 			{...mode.dropdown}
 		>
 			<button
 				className={cls(styles.item, styles.currentItem)}
 				{...mode.currentItem}
 			>
-				{currentItem}
+				{currentItem.value}
 			</button>
 			{ isOpen &&
 				<ul className={cls(styles.dropdownContent)}>
 					{
 						options.map((option) => (
 							<li className={styles.dropdownItem}>
-								<button
+								<Component
 									onClick={() => handleOnClick(option)}
 									className={styles.item}
-								>{option}
-								</button>
+									{...option?.linkTo}
+								>{option.value}
+								</Component>
 							</li>
 						)
 					)}
