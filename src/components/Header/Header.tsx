@@ -62,13 +62,12 @@ export const Header = () => (
 			<nav className={styles.nav}>
 				<ul className={cls(styles.nav__list)}>
 					<li>
-						<LinkDropdown data={[
-								{ value: "Hero", link: "#" },
-								{ value: "About", link: "#" },
-								{ value: "What", link: "#" },
-								{ value: "Idk", link: "#" },
-							]}
-						/>
+						<Dropdown>
+							<Link href="#">Hero</Link>
+							<Link href="#">About</Link>
+							<Link href="#">What</Link>
+							<Link href="#">Idk</Link>
+						</Dropdown>
 					</li>
 					<li>
 						<Link href="#">Pages</Link>
