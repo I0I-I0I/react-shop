@@ -27,6 +27,7 @@ interface IMode {
 	dropdown?: {
 		onMouseOver: () => void;
 		onMouseLeave: () => void;
+		onClick: () => void;
 	};
 	currentItem?: {
 		onClick: () => void;
@@ -44,22 +45,25 @@ export const Dropdown = ({
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleOnClick = (item: OptionsLinkType) => {
-		if (disableSwitchMode) return;
 		setIsOpen(false);
-		setCurrentItem(item);
+
+		if (!disableSwitchMode) {
+			setCurrentItem(item);
+		};
 	};
 
 	const modeList = {
-		"hover":{
+		"hover": {
 			dropdown: {
 				onMouseOver: () => setIsOpen(true),
 				onMouseLeave: () => setIsOpen(false),
-			}
+				onClick: () => setIsOpen((state) => !state),
+			},
 		},
-		"click":{
+		"click": {
 			currentItem: {
 				onClick: () => setIsOpen((state) => !state),
-			}
+			},
 		}
 	};
 
@@ -77,22 +81,20 @@ export const Dropdown = ({
 			>
 				{currentItem.value}
 			</button>
-			{ isOpen &&
-				<ul className={cls(styles.dropdownContent)}>
-					{
-						options.map((option) => (
-							<li className={styles.dropdownItem}>
-								<Component
-									onClick={() => handleOnClick(option)}
-									className={styles.item}
-									{...option?.linkTo}
-								>{option.value}
-								</Component>
-							</li>
-						)
-					)}
-				</ul>
-			}
+			<ul className={cls(styles.dropdownContent, isOpen ? styles.isOpen : styles.isClose)}>
+				{
+					options.map((option) => (
+						<li className={styles.dropdownItem}>
+							<Component
+								onClick={() => handleOnClick(option)}
+								className={styles.item}
+								{...option?.linkTo}
+							>{option.value}
+							</Component>
+						</li>
+					)
+				)}
+			</ul>
 		</div>
 	)
 }

@@ -13,6 +13,24 @@
 	cursor: pointer;
 }
 
+.isOpen {
+	animation: OpenAnimation .15s ease-in-out;
+}
+
+.isClose {
+	display: none;
+}
+
+@keyframes OpenAnimation {
+	0% {
+		scale: 1 0;
+		translate: 0 -50%;
+	}
+	100% {
+		scale: 1 1;
+	}
+}
+
 .dropdownContent {
 	--padding: 5px;
 
@@ -24,30 +42,16 @@
 	background-color: var(--page-button-color);
 	color: var(--black);
 
-	&:hover {
-		display: block;
-	}
-
 	&::before {
 		content: '';
 		position: absolute;
-		top: -10px;
+		top: -5px;
 		left: 0;
 		right: 0;
 		display: block;
 		width: 100%;
-		height: 10px;
+		height: 5px;
 		background-color: transparent;
-	}
-}
-
-@keyframes OpenAnimation {
-	0% {
-		opacity: 0;
-		display: block;
-	}
-	100% {
-		opacity: 1;
 	}
 }
 
@@ -66,7 +70,7 @@
 	li > & {
 		--color-current-item: black;
 
-		padding: 5px;
+		padding: 10px;
 		width: 100%;
 		border-radius: var(--item-border-radius);
 
