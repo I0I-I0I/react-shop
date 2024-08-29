@@ -3,7 +3,13 @@ body {
 }
 
 .root {
-	display: grid;
-	grid-template-rows: max-content 1fr max-content;
 	min-height: 100dvh;
+	max-width: 100dvw;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	--scroll-bar: calc(-1 * (100vw - 100%));
+	width: calc(100vw - var(--scroll-bar));
+	margin: 0 calc(-50vw + 50% + (var(--scroll-bar) / 2));
 }
