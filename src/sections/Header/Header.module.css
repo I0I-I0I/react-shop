@@ -12,6 +12,9 @@
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}
+
+	@media (width < 1000px) {
+	}
 }
 
 .header__bottom {

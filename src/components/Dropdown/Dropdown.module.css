@@ -14,7 +14,7 @@
 }
 
 .isOpen {
-	animation: OpenAnimation .15s ease-in-out;
+	animation: OpenAnimation 0.15s ease-in-out;
 }
 
 .isClose {
@@ -43,7 +43,7 @@
 	color: var(--black);
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: -5px;
 		left: 0;

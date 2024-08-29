@@ -1,18 +1,14 @@
 import { useState } from "react";
-import styles from "./Dropdown.module.css";
 import cls from "@/utils/cls";
+import styles from "./Dropdown.module.css";
 
-type OpenOnType =
-	| "hover"
-	| "click";
+type OpenOnType = "hover" | "click";
 
-type ComponentType =
-	| "button"
-	| "a";
+type ComponentType = "button" | "a";
 
 type OptionsLinkType = {
-	value: string,
-	linkTo?: { href: string },
+	value: string;
+	linkTo?: { href: string };
 };
 
 interface DropdownProps {
@@ -39,7 +35,7 @@ export const Dropdown = ({
 	className = "",
 	openOn = "click",
 	disableSwitchMode = false,
-	component = "button"
+	component = "button",
 }: DropdownProps) => {
 	const [currentItem, setCurrentItem] = useState(options[0]);
 	const [isOpen, setIsOpen] = useState(false);
@@ -49,52 +45,53 @@ export const Dropdown = ({
 
 		if (!disableSwitchMode) {
 			setCurrentItem(item);
-		};
+		}
 	};
 
 	const modeList = {
-		"hover": {
+		hover: {
 			dropdown: {
 				onMouseOver: () => setIsOpen(true),
 				onMouseLeave: () => setIsOpen(false),
 				onClick: () => setIsOpen((state) => !state),
 			},
 		},
-		"click": {
+		click: {
 			currentItem: {
 				onClick: () => setIsOpen((state) => !state),
 			},
-		}
+		},
 	};
 
 	const mode: IMode = modeList[openOn];
 	const Component = component;
 
 	return (
-		<div
-			className={cls(styles.dropdown, className)}
-			{...mode.dropdown}
-		>
+		<div className={cls(styles.dropdown, className)} {...mode.dropdown}>
 			<button
 				className={cls(styles.item, styles.currentItem)}
 				{...mode.currentItem}
 			>
 				{currentItem.value}
 			</button>
-			<ul className={cls(styles.dropdownContent, isOpen ? styles.isOpen : styles.isClose)}>
-				{
-					options.map((option) => (
-						<li className={styles.dropdownItem}>
-							<Component
-								onClick={() => handleOnClick(option)}
-								className={styles.item}
-								{...option?.linkTo}
-							>{option.value}
-							</Component>
-						</li>
-					)
+			<ul
+				className={cls(
+					styles.dropdownContent,
+					isOpen ? styles.isOpen : styles.isClose,
 				)}
+			>
+				{options.map((option, index) => (
+					<li className={styles.dropdownItem} key={index}>
+						<Component
+							onClick={() => handleOnClick(option)}
+							className={styles.item}
+							{...option?.linkTo}
+						>
+							{option.value}
+						</Component>
+					</li>
+				))}
 			</ul>
 		</div>
-	)
-}
+	);
+};

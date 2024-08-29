@@ -1,2 +1,4 @@
-export * from "./Footer/Footer";
-export * from "./Header/Header";
+export * from "./Search/Search";
+export * from "./TextWithIcon/TextWithIcon";
+export * from "./Dropdown/Dropdown";
+export * from "./InputWithButton/InputWithButton";

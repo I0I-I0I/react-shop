@@ -1,0 +1,13 @@
+.col {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(12px, 5vw - 20px, 42px);
+}
+
+.col__item {
+	line-height: 20px;
+
+	&:not(:last-child) {
+		margin-bottom: clamp(6px, 5vw - 30px, 20px);
+	}
+}

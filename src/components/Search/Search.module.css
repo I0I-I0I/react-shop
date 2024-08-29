@@ -1,0 +1,9 @@
+.search {
+	display: flex;
+	align-items: center;
+}
+
+.input_search {
+	height: 40px;
+	border-right: none;
+}

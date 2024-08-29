@@ -1,4 +1,5 @@
-import { Link, Dropdown, Logo, TextWithIcon, Search } from "@/components/UI";
+import { Link, Logo } from "@/components/UI";
+import { Dropdown, Search, TextWithIcon } from "@/components";
 import styles from "./Header.module.css";
 import cls from "@/utils/cls";
 
@@ -9,11 +10,8 @@ const data = {
 		{ value: "Bulgar" },
 		{ value: "Ukrain" },
 	],
-	currency: [
-		{ value: "USD" },
-		{ value: "RUB" },
- 	]
-}
+	currency: [{ value: "USD" }, { value: "RUB" }],
+};
 
 export const Header = () => (
 	<header className={styles.header}>
@@ -21,13 +19,25 @@ export const Header = () => (
 			<div className="container">
 				<ul className={cls(styles.contacts__list, styles.header__list)}>
 					<li className={styles.contacts__item}>
-						<Link href="mailto:mhhasanul@gmail.com" noHover className={styles.contacts__iconWrapper}>
-							<TextWithIcon src="/icons/mail.svg" direction="left">mhhasanul@gmail.com</TextWithIcon>
+						<Link
+							href="mailto:mhhasanul@gmail.com"
+							noHover
+							className={styles.contacts__iconWrapper}
+						>
+							<TextWithIcon src="/icons/mail.svg" direction="left">
+								mhhasanul@gmail.com
+							</TextWithIcon>
 						</Link>
 					</li>
 					<li className={styles.contacts__itemWrapper}>
-						<Link href="tel:(12345)67890" noHover className={styles.contacts__iconWrapper}>
-							<TextWithIcon src="/icons/phone.svg" direction="left">(12345)67890</TextWithIcon>
+						<Link
+							href="tel:(12345)67890"
+							noHover
+							className={styles.contacts__iconWrapper}
+						>
+							<TextWithIcon src="/icons/phone.svg" direction="left">
+								(12345)67890
+							</TextWithIcon>
 						</Link>
 					</li>
 				</ul>
@@ -42,17 +52,23 @@ export const Header = () => (
 				<ul className={styles.header__list}>
 					<li className={styles.header__item}>
 						<Link href="#">
-							<TextWithIcon src="/icons/user.svg" gap="2px">Login</TextWithIcon>
+							<TextWithIcon src="/icons/user.svg" gap="2px">
+								Login
+							</TextWithIcon>
 						</Link>
 					</li>
 					<li className={styles.header__item}>
 						<Link href="#">
-							<TextWithIcon src="/icons/heart-alt.svg" gap="2px">Wishlist</TextWithIcon>
+							<TextWithIcon src="/icons/heart-alt.svg" gap="2px">
+								Wishlist
+							</TextWithIcon>
 						</Link>
 					</li>
 					<li className={styles.header__item}>
 						<Link className="" href="#" aria-label="Card">
-							<TextWithIcon src="/icons/card.svg" gap="0px" size="medium"><span className="visually-hidden">Card</span></TextWithIcon>
+							<TextWithIcon src="/icons/card.svg" gap="0px" size="medium">
+								<span className="visually-hidden">Card</span>
+							</TextWithIcon>
 						</Link>
 					</li>
 				</ul>

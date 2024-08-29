@@ -20,20 +20,19 @@ export const TextWithIcon = ({
 	size = "default",
 	gap = "16px",
 	direction = "right",
-	src
+	src,
 }: IconProps) => (
-	<span
-		className={cls(styles.textWithIcon, className)}
-		style={{ gap: gap }}
-	>
-		{ direction === "left" ? (
+	<span className={cls(styles.textWithIcon, className)} style={{ gap: gap }}>
+		{direction === "left" ? (
 			<>
-				<Icon src={src} size={size} />{children}
+				<Icon src={src} size={size} />
+				{children}
 			</>
 		) : (
 			<>
-				{children}<Icon src={src} size={size} />
+				{children}
+				<Icon src={src} size={size} />
 			</>
 		)}
 	</span>
-)
+);
