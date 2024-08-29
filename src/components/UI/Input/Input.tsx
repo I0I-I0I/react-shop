@@ -7,12 +7,23 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
 }
 
-export const Input: React.FC<InputProps> = ({ label, className = "", ...props }) => {
+export const Input: React.FC<InputProps> = ({
+	label,
+	className = "",
+	...props
+}) => {
 	const id = useId();
 
 	return (
-		<div className={cls(styles.input__wrapper, className)}>
-			{ label && <label htmlFor={id}>{label}</label> }
-			<input id={id} {...props} />
-		</div>
-)}
+		<>
+			{label ? (
+				<div className={styles.input__wrapper}>
+					<label htmlFor={id}>{label}</label>
+					<input className={cls(styles.input, className)} id={id} {...props} />
+				</div>
+			) : (
+				<input className={cls(styles.input, className)} id={id} {...props} />
+			)}
+		</>
+	);
+};

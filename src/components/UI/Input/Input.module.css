@@ -1,0 +1,10 @@
+.input {
+	border: 2px solid var(--input-border);
+	outline: none;
+	padding: 5px;
+	transition: all 0.15s ease-in-out;
+
+	&:focus-visible {
+		border-color: var(--black);
+	}
+}
