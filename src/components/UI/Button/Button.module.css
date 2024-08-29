@@ -3,7 +3,7 @@
 	height: var(--height);
 	border-radius: var(--bd-radius);
 	padding: var(--padding);
-	transition: all .15s ease-in-out;
+	transition: all 0.15s ease-in-out;
 }
 
 .none {
@@ -27,9 +27,10 @@
 .contained {
 	--width: auto;
 	--height: auto;
-	--bd-radius: 3px;
+	--bd-radius: var(--button-containd-bd-radius);
 
 	background-color: var(--accent);
+	color: var(--white);
 	border: none;
 
 	&:hover {

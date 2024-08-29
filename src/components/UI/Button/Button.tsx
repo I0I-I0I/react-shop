@@ -2,17 +2,9 @@ import React from "react";
 import styles from "./Button.module.css";
 import cls from "@/utils/cls";
 
-type ButtonSize =
-	| "none"
-	| "medium"
-	| "small"
-	| "large";
+type ButtonSize = "none" | "medium" | "small" | "large";
 
-type ButtonVariants =
-	| "contained"
-	| "rounded"
-	| "square"
-	| "search";
+type ButtonVariants = "contained" | "rounded" | "square" | "search";
 
 interface ButtonProps {
 	children: string | React.ReactElement;
@@ -32,4 +24,4 @@ export const Button = ({
 	>
 		{children}
 	</button>
-)
+);

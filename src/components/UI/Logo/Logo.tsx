@@ -12,4 +12,4 @@ export const Logo: React.FC<LogoProps> = ({ className = "" }) => (
 		alt="Imagine logo here"
 		className={cls(styles.logo, className)}
 	/>
-)
+);

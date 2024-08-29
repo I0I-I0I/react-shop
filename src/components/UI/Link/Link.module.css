@@ -1,5 +1,5 @@
 .defaultLink {
-	--transition-duration: .15s;
+	--transition-duration: 0.15s;
 	--color: inherit;
 	--color-icon: white;
 
@@ -22,16 +22,16 @@
 	outline: none;
 
 	&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			height: 2px;
-			left: 0;
-			width: 0px;
-			bottom: -1px;
-			background-color: var(--color-hover);
-			transition: all var(--transition-duration) ease-in-out;
-		}
+		content: "";
+		position: absolute;
+		display: block;
+		height: 2px;
+		left: 0;
+		width: 0px;
+		bottom: -1px;
+		background-color: var(--color-hover);
+		transition: all var(--transition-duration) ease-in-out;
+	}
 
 	&:hover,
 	&:focus-visible {

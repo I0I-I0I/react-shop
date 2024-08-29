@@ -1,6 +1,6 @@
 #root {
 	font-family: var(--font-main);
-	line-height: 1.5;
+	line-height: 1.2;
 	font-weight: 400;
 
 	color: var(--text);
@@ -21,7 +21,6 @@ body {
 }
 
 .container {
-	--page-max-width: calc(1170px + (var(--global-padding) * 2));
 	max-width: var(--page-max-width);
 	margin: 0 auto;
 	padding-left: var(--global-padding);

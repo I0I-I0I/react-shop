@@ -2,14 +2,9 @@ import React from "react";
 import styles from "./Link.module.css";
 import cls from "@/utils/cls";
 
-type sizeType =
-	| "default"
-	| "small";
+type sizeType = "default" | "small";
 
-type variantType =
-	| "link"
-	| "button"
-	| "card";
+type variantType = "link" | "button" | "card";
 
 interface LinkProps extends React.ComponentProps<"a"> {
 	href: string;
@@ -36,12 +31,12 @@ export const Link = ({
 				styles.defaultLink,
 				styles[size],
 				styles[variant],
-				className
+				className,
 			)}
 			href={href}
 			{...props}
 		>
 			{children}
 		</a>
-	)
+	);
 };
