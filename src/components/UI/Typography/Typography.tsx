@@ -8,7 +8,6 @@ type TypographyVariant =
 	| "title-3"
 	| "title-4"
 	| "title-5"
-	| "title-6"
 	| "text"
 	| "text_small"
 	| "text_large";
@@ -22,13 +21,13 @@ interface TypographyProps {
 	children: string | React.ReactElement;
 }
 
-export const Typography: React.FC<TypographyProps> = ({
+export const Typography = ({
 	tag = "p",
 	variant = "text",
 	className = "",
 	children,
 	...props
-}) => {
+}: TypographyProps) => {
 	const Component = tag;
 
 	return (

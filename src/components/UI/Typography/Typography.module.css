@@ -1,34 +1,43 @@
 /* Title */
 
-title-1 {
-	font-size: 2rem;
+.title-1 {
+	font-size: 3.25rem;
 	font-weight: bold;
 }
 
-title-2 {
+.title-2 {
+	font-size: 2.625rem;
 }
 
-title-3 {
+.title-3 {
+	font-size: 2.25rem;
 }
 
-title-4 {
+.title-4 {
+	font-size: 1.5rem;
 }
 
-title-5 {
+.title-5 {
+	font-size: 1.25rem;
 }
 
-title-6 {
+.title-6 {
+	font-size: 1.125rem;
 }
 
 /* Text */
 
-text {
+.text {
+	--color: black;
+
 	font-size: 1rem;
-	color: black;
+	color: var(--color);
 }
 
-text_small {
+.text_small {
+	font-size: 0.75rem;
 }
 
-text_large {
+.text_large {
+	font-size: 1.125rem;
 }
