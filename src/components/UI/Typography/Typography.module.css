@@ -28,10 +28,8 @@
 /* Text */
 
 .text {
-	--color: black;
-
 	font-size: 1rem;
-	color: var(--color);
+	color: inherit;
 }
 
 .text_small {

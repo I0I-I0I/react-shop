@@ -15,7 +15,7 @@ interface ColItemProps {
 
 export const Col = ({ title, children }: ColProps) => (
 	<div className={styles.col}>
-		<Typography tag="h2" variant="title-2">
+		<Typography tag="h2" variant="title-5">
 			{title}
 		</Typography>
 		<ul className={styles.col__list}>
