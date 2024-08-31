@@ -1,4 +1,13 @@
 .social__list {
 	display: flex;
-	gap: 15px;
+	gap: var(--gap);
+	justify-content: center;
+}
+
+.small {
+	--gap: 10px;
+}
+
+.medium {
+	--gap: 15px;
 }

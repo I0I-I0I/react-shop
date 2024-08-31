@@ -2,7 +2,12 @@ import cls from "@/utils/cls";
 import styles from "./Icon.module.css";
 import { ReactSVG } from "react-svg";
 
-export type IconSize = "default" | "small" | "medium" | "large";
+export type IconSize =
+	| "default"
+	| "small"
+	| "medium"
+	| "medium_small"
+	| "large";
 
 interface IconProps {
 	src: string;

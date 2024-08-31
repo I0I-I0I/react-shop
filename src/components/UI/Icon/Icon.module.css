@@ -11,6 +11,10 @@
 	--size: 12px;
 }
 
+.medium_small {
+	--size: 20px;
+}
+
 .medium {
 	--size: 24px;
 }

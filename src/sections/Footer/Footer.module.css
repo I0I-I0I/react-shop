@@ -13,12 +13,18 @@
 
 .footer__bottom {
 	background-color: #e7e4f8;
+	padding: 17px 0;
 }
 
 .footer__bottomInner {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-items: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 18px;
+
+	@media (width < 700px) {
+		flex-direction: column-reverse;
+	}
 }
 
 /* Inner */
