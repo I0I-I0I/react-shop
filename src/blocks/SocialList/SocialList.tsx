@@ -39,7 +39,7 @@ export const SocialItem = ({
 	className = "",
 }: SocialItemProps) => (
 	<li className={styles.social__item}>
-		<Link href={href} aria-label={alt} className={className}>
+		<Link component="link" href={href} aria-label={alt} className={className}>
 			<Icon size={size} src={src} />
 		</Link>
 	</li>

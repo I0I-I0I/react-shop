@@ -61,7 +61,14 @@ export const Footer = () => (
 					<Col title={item.title}>
 						{item.values.map((value) => (
 							<ColItem className={styles.footer__link}>
-								<Link href={value.link}>{value.value}</Link>
+								<Link
+									component="link"
+									variant="default"
+									size="default"
+									href={value.link}
+								>
+									{value.value}
+								</Link>
 							</ColItem>
 						))}
 					</Col>

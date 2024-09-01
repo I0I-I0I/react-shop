@@ -2,40 +2,52 @@ import cls from "@/utils/cls";
 import React from "react";
 import styles from "./Link.module.css";
 
-type sizeType = "default" | "small";
+type ComponentType = "link" | "button" | "card";
 
-type variantType = "link" | "button" | "card";
+type ButtonVariants = "default" | "rounded" | "square" | "search";
+type LinkVariants = "default";
 
-interface LinkProps extends React.ComponentProps<"a"> {
+type LinkSize = "default" | "small";
+type ButtonSize = "default" | "medium" | "small" | "large";
+
+type SizeType<T extends ComponentType> = T extends "link"
+	? LinkSize
+	: ButtonSize;
+type VariantType<T extends ComponentType> = T extends "link"
+	? LinkVariants
+	: ButtonVariants;
+
+interface LinkProps<T extends ComponentType> extends React.ComponentProps<"a"> {
 	href: string;
 	children: React.ReactNode;
 	noHover?: boolean;
 	className?: string;
-	size?: sizeType;
-	variant?: variantType;
+	size?: SizeType<T>;
+	variant?: VariantType<T>;
+	component: T;
 }
 
-export const Link = ({
+export const Link = <T extends ComponentType>({
 	href,
 	children,
-	noHover,
+	noHover = false,
 	className = "",
+	variant = "default",
 	size = "default",
-	variant = "link",
+	component,
 	...props
-}: LinkProps) => {
+}: LinkProps<T>) => {
+	const classesForLink = noHover ? "" : styles.linkHover;
+	const classes = cls(
+		component === "link" ? classesForLink : "",
+		styles[component],
+		styles[size],
+		styles[variant],
+		className,
+	);
+
 	return (
-		<a
-			className={cls(
-				!noHover ? styles.linkHover : "",
-				styles.defaultLink,
-				styles[size],
-				styles[variant],
-				className,
-			)}
-			href={href}
-			{...props}
-		>
+		<a className={classes} href={href} {...props}>
 			{children}
 		</a>
 	);
