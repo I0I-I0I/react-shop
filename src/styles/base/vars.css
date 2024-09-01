@@ -7,6 +7,7 @@
 	--font-second: "Josefin Sans", sans-serif;
 	--font-third: "Poppins", sans-serif;
 	--font-forth: "Roboto", sans-serif;
+
 	--white: #ffffff;
 	--input-border: #e7e6ef;
 	--bg-shade: #eeeffb;
@@ -23,6 +24,7 @@
 	--page-button-color: #e0d3f5;
 	--pink: #fb2e86;
 	--black: #111111;
+	--hero-bg: #f6f5ff;
 
 	--button-containd-bd-radius: 3px;
 }
