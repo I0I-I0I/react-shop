@@ -1,5 +1,5 @@
-import { useState } from "react";
 import cls from "@/utils/cls";
+import { useState } from "react";
 import styles from "./Dropdown.module.css";
 
 type OpenOnType = "hover" | "click";

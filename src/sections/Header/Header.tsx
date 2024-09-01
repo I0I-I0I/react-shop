@@ -1,7 +1,7 @@
-import { Link, Logo } from "@/components/UI";
 import { Dropdown, Search, TextWithIcon } from "@/components";
-import styles from "./Header.module.css";
+import { Link, Logo } from "@/components/UI";
 import cls from "@/utils/cls";
+import styles from "./Header.module.css";
 
 const data = {
 	languages: [

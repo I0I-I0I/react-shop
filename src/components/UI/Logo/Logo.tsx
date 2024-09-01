@@ -1,5 +1,5 @@
-import React from "react";
 import cls from "@/utils/cls";
+import React from "react";
 import styles from "./Logo.module.css";
 
 interface LogoProps {

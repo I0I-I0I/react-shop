@@ -1,6 +1,6 @@
+import cls from "@/utils/cls";
 import React, { InputHTMLAttributes, useId } from "react";
 import styles from "./Input.module.css";
-import cls from "@/utils/cls";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	className?: string;

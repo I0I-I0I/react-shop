@@ -1,6 +1,6 @@
+import cls from "@/utils/cls";
 import React from "react";
 import styles from "./Typography.module.css";
-import cls from "@/utils/cls";
 
 type TypographyVariant =
 	| "title-1"

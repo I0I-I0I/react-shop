@@ -1,6 +1,6 @@
+import cls from "@/utils/cls";
 import React from "react";
 import styles from "./Link.module.css";
-import cls from "@/utils/cls";
 
 type sizeType = "default" | "small";
 

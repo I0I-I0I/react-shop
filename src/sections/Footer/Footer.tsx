@@ -1,6 +1,6 @@
 import { SocialItem, SocialList } from "@/blocks";
 import { InputWithButton } from "@/components";
-import { Icon, Link, Logo, Typography } from "@/components/UI";
+import { Link, Logo, Typography } from "@/components/UI";
 import { Col, ColItem } from "@/sections/Footer/components";
 import cls from "@/utils/cls";
 import styles from "./Footer.module.css";

@@ -1,7 +1,7 @@
 import { Typography } from "@/components/UI";
-import styles from "./Col.module.css";
-import React from "react";
 import cls from "@/utils/cls";
+import React from "react";
+import styles from "./Col.module.css";
 
 interface ColProps {
 	title: string;

@@ -1,7 +1,7 @@
+import { Icon, IconSize, Link } from "@/components/UI";
 import cls from "@/utils/cls";
 import React from "react";
 import styles from "./SocialList.module.css";
-import { Icon, IconSize, Link } from "@/components/UI";
 
 type SizeType = "medium" | "small";
 

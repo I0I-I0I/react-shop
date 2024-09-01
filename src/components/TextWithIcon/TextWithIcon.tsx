@@ -1,7 +1,7 @@
 import { Icon } from "@/components/UI";
-import styles from "./TextWithIcon.module.css";
 import cls from "@/utils/cls";
-import { IconSize } from "../Icon/Icon";
+import { IconSize } from "../UI/Icon/Icon";
+import styles from "./TextWithIcon.module.css";
 
 type DirectionType = "left" | "right";
 

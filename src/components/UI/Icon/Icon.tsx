@@ -1,6 +1,6 @@
 import cls from "@/utils/cls";
-import styles from "./Icon.module.css";
 import { ReactSVG } from "react-svg";
+import styles from "./Icon.module.css";
 
 export type IconSize =
 	| "default"

@@ -1,6 +1,6 @@
+import cls from "@/utils/cls";
 import React from "react";
 import styles from "./Button.module.css";
-import cls from "@/utils/cls";
 
 type ButtonSize = "none" | "medium" | "small" | "large";
 

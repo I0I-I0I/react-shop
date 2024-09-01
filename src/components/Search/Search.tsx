@@ -1,5 +1,5 @@
-import { useId } from "react";
 import { Button, Input } from "@/components/UI";
+import { useId } from "react";
 import styles from "./Search.module.css";
 
 export const Search = () => {

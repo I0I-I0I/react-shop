@@ -1,6 +1,6 @@
 import { Button, Input } from "@/components/UI";
-import styles from "./InputWithButton.module.css";
 import cls from "@/utils/cls";
+import styles from "./InputWithButton.module.css";
 
 interface InputWithButtonProps {
 	buttonText: string;
