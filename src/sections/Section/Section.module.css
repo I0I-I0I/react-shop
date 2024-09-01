@@ -1,0 +1,13 @@
+.section {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.small {
+	max-width: 1050px;
+}
+
+.large {
+	max-width: 1240px;
+}
