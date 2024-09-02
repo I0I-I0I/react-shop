@@ -11,8 +11,6 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 import cls from "@/utils/cls";
-import { Card } from "@/components";
-import { title } from "process";
 
 export const HomeHero = () => (
 	<Section size="free" className={styles.hero}>
@@ -42,12 +40,6 @@ export const HomeHero = () => (
 			>
 				Shop Now
 			</Link>
-			<Card variant="mini" data={{
-				title: "Hello",
-				price: "Hello",
-				alt: "Hello",
-				src: "/images/home/hero-card.jpg",
-			}} />
 		</div>
 		<Slider
 			pagination="rhombus"
