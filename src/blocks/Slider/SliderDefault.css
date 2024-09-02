@@ -1,0 +1,44 @@
+.sliderBullet_rhombus {
+	--size: 10px;
+	--bg-color: var(--accent);
+
+	background-color: black;
+	min-width: var(--size);
+	min-height: var(--size);
+	rotate: 45deg;
+	background-color: transparent;
+	border: 1px solid var(--bg-color);
+
+	margin-left: 12px;
+	display: inline-block;
+	cursor: pointer;
+
+	transition: all 0.15s ease-in-out;
+
+	&.sliderBullet_active {
+		background-color: var(--bg-color);
+	}
+}
+
+.sliderBullet_cyrcle {
+	--size: 10px;
+	--bg-color: var(--accent);
+
+	background-color: black;
+	min-width: var(--size);
+	min-height: var(--size);
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid var(--bg-color);
+
+	margin-left: 12px;
+	display: inline-block;
+	cursor: pointer;
+
+	transition: all 0.15s ease-in-out;
+
+	&.sliderBullet_active {
+		background-color: var(--bg-color);
+	}
+}
+
