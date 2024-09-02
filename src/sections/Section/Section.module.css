@@ -11,3 +11,7 @@
 .large {
 	max-width: 1240px;
 }
+
+.free {
+	max-width: 100dvw;
+}

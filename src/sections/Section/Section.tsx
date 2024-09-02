@@ -1,13 +1,13 @@
 import cls from "@/utils/cls";
 import styles from "./Section.module.css";
 
-type SizeType = "default" | "small" | "large";
+type SizeType = "default" | "small" | "large" | "free";
 
 interface SectionProps {
 	children: React.ReactNode;
 	size?: SizeType;
 	className?: string;
-	src: string;
+	src?: string;
 }
 
 export const Section = ({
@@ -17,7 +17,7 @@ export const Section = ({
 	className = "",
 }: SectionProps) => (
 	<section
-		style={{ backgroundImage: `url(${src}) ` }}
+		style={ src ? { backgroundImage: `url(${src})` } : {}}
 		className={cls(styles.section)}
 	>
 		<div
